@@ -1,160 +1,118 @@
-# Luis Miguel González - Portafolio Personal
+# Luis Miguel González - Portfolio Personal
 
-Portafolio profesional de Luis Miguel González Domínguez, desarrollador de software especializado en backend con experiencia en Python, Django y soluciones empresariales.
+Portfolio personal de Luis Miguel González Domínguez, desarrollador de software especializado en backend.
 
 ## 🚀 Características
 
-- **Diseño Responsive**: Optimizado para todos los dispositivos
-- **Rendimiento Optimizado**: Carga rápida y experiencia fluida
-- **SEO Friendly**: Optimizado para motores de búsqueda
-- **Accesibilidad**: Cumple con estándares WCAG
-- **PWA Ready**: Funcionalidad de aplicación web progresiva
+- **Diseño Responsivo**: Optimizado para todos los dispositivos
+- **Modo Oscuro/Claro**: Toggle para cambiar entre temas
+- **Bilingüe**: Soporte para español e inglés
+- **Animaciones Suaves**: Transiciones y efectos visuales elegantes
+- **SEO Optimizado**: Metadatos y estructura optimizada para buscadores
+- **Rendimiento**: Construido con Next.js para máxima velocidad
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Frontend**: React 18, Vite
-- **Styling**: Tailwind CSS
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Radix UI
 - **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Deployment**: GitHub Pages
+- **Fonts**: Playfair Display & Source Sans Pro
+- **Theme**: next-themes
+- **TypeScript**: Para tipado estático
 
-## 📱 Secciones
+## 📦 Instalación Local
 
-- **Hero**: Presentación principal con información destacada
-- **Sobre Mí**: Información personal y profesional
-- **Experiencia**: Trayectoria laboral detallada
-- **Educación**: Formación académica y logros
-- **Proyectos**: Showcase de proyectos principales
-- **Habilidades**: Competencias técnicas y blandas
-- **Contacto**: Formulario y información de contacto
+1. Clona el repositorio:
+\`\`\`bash
+git clone https://github.com/F3-nrir/f3-nrir.github.io.git
+cd f3-nrir.github.io
+\`\`\`
 
-## 🏆 Logros Destacados
+2. Instala las dependencias:
+\`\`\`bash
+npm install
+\`\`\`
 
-- 2º Lugar ICPC Caribeño 2022 (Equipo YesReturn)
-- Título de Oro en Ingeniería Informática
-- Premio al Mérito Científico
-- Experiencia en desarrollo empresarial
+3. Ejecuta el servidor de desarrollo:
+\`\`\`bash
+npm run dev
+\`\`\`
 
-## 🚀 Instalación y Desarrollo Local
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-### Prerrequisitos
+## 🚀 Despliegue en GitHub Pages
 
-- Node.js 18 o superior
-- npm o yarn
+1. Construye el proyecto:
+\`\`\`bash
+npm run build
+\`\`\`
 
-### Pasos de Instalación
+2. Los archivos estáticos se generarán en la carpeta `out/`
 
-1. **Clonar el repositorio**
-   \`\`\`bash
-   git clone https://github.com/F3-nrir/f3-nrir.github.io.git
-   cd f3-nrir.github.io
-   \`\`\`
+3. Para GitHub Pages, asegúrate de que el repositorio esté configurado para servir desde la rama `gh-pages` o `main`.
 
-2. **Instalar dependencias**
-   \`\`\`bash
-   npm install
-   \`\`\`
+## 📁 Estructura del Proyecto
 
-3. **Ejecutar en modo desarrollo**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
-
-4. **Abrir en el navegador**
-   \`\`\`
-   http://localhost:5173
-   \`\`\`
-
-### Scripts Disponibles
-
-- `npm run dev` - Servidor de desarrollo
-- `npm run build` - Construir para producción
-- `npm run preview` - Vista previa de la build
-- `npm run deploy` - Desplegar a GitHub Pages
-
-## 📦 Deployment en GitHub Pages
-
-### Configuración Automática
-
-El proyecto incluye GitHub Actions para deployment automático:
-
-1. **Push a main branch** activa el deployment automáticamente
-2. **Build process** ejecuta `npm run build`
-3. **Deploy** publica en GitHub Pages
-
-### Configuración Manual
-
-1. **Configurar GitHub Pages**
-   - Ve a Settings > Pages
-   - Source: GitHub Actions
-   - Branch: gh-pages
-
-2. **Configurar dominio personalizado (opcional)**
-   - Agregar CNAME file con tu dominio
-   - Configurar DNS records
+\`\`\`
+├── app/                    # App Router de Next.js
+│   ├── layout.tsx         # Layout principal
+│   ├── page.tsx           # Página principal
+│   └── globals.css        # Estilos globales
+├── components/            # Componentes React
+│   ├── ui/               # Componentes de UI reutilizables
+│   ├── header.tsx        # Navegación principal
+│   ├── hero.tsx          # Sección hero
+│   ├── about.tsx         # Sección sobre mí
+│   ├── skills.tsx        # Habilidades técnicas
+│   ├── experience.tsx    # Experiencia laboral
+│   ├── projects.tsx      # Proyectos destacados
+│   ├── contact.tsx       # Información de contacto
+│   └── footer.tsx        # Pie de página
+├── public/               # Archivos estáticos
+└── lib/                  # Utilidades y configuración
+\`\`\`
 
 ## 🎨 Personalización
 
 ### Colores
-
-El proyecto usa una paleta de colores personalizada definida en `tailwind.config.js`:
-
-- **Primary**: #2563eb (Azul profesional)
-- **Accent**: #0ea5e9 (Cyan vibrante)
-- **Neutral Light**: #f8fafc (Gris claro)
-- **Neutral Dark**: #334155 (Slate oscuro)
+Los colores principales se definen en `app/globals.css`:
+- **Primary**: Cyan-800 (#164e63)
+- **Accent**: Lime-500 (#84cc16)
+- **Neutrals**: Blancos, grises y negros
 
 ### Tipografía
+- **Headings**: Playfair Display (serif)
+- **Body**: Source Sans Pro (sans-serif)
 
-- **Headings**: Space Grotesk (Moderno y técnico)
-- **Body**: DM Sans (Legible y profesional)
+### Contenido
+El contenido se gestiona a través del sistema de traducciones en `components/language-provider.tsx`.
 
-### Responsive Design
+## 📱 Características Responsivas
 
-- **Mobile First**: Diseño optimizado para móviles
+- **Mobile First**: Diseñado primero para móviles
 - **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px)
-- **Touch Friendly**: Botones y enlaces optimizados para touch
+- **Navegación Móvil**: Menú hamburguesa para pantallas pequeñas
+- **Imágenes Optimizadas**: Responsive y optimizadas para web
 
-## 📊 Performance
+## 🌐 SEO y Rendimiento
 
-- **Lighthouse Score**: 95+ en todas las métricas
-- **Core Web Vitals**: Optimizado
-- **Bundle Size**: Minimizado y optimizado
-- **Image Optimization**: Formatos modernos y lazy loading
-
-## 🔧 Mantenimiento
-
-### Actualizar Información Personal
-
-1. **Datos personales**: Editar en `src/components/Hero.jsx`
-2. **Experiencia**: Actualizar en `src/components/Experience.jsx`
-3. **Proyectos**: Modificar en `src/components/Projects.jsx`
-4. **Habilidades**: Ajustar en `src/components/Skills.jsx`
-
-### Agregar Nuevos Proyectos
-
-\`\`\`jsx
-// En src/components/Projects.jsx
-const newProject = {
-  title: "Nombre del Proyecto",
-  description: "Descripción detallada...",
-  image: "/project-image.png",
-  technologies: ["Tech1", "Tech2"],
-  // ... más propiedades
-}
-\`\`\`
+- **Meta Tags**: Configurados para redes sociales y buscadores
+- **Open Graph**: Soporte para Facebook, Twitter, etc.
+- **Sitemap**: Generado automáticamente
+- **Lighthouse Score**: Optimizado para máximo rendimiento
 
 ## 📞 Contacto
 
 - **Email**: f3nrir.v2@gmail.com
+- **Teléfono**: +53 55886613
 - **LinkedIn**: [luis-miguel-gonzalez-dominguez](https://linkedin.com/in/luis-miguel-gonzalez-dominguez)
 - **GitHub**: [F3-nrir](https://github.com/F3-nrir)
-- **Ubicación**: Las Tunas, Cuba
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+Este proyecto es de uso personal. Todos los derechos reservados © 2025 Luis Miguel González Domínguez.
 
 ---
 
-**Desarrollado con ❤️ por Luis Miguel González Domínguez**
+**Construido con ❤️ usando Next.js y Tailwind CSS**
