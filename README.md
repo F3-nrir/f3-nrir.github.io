@@ -43,34 +43,50 @@ npm run dev
 
 ## 🚀 Despliegue en GitHub Pages
 
-1. Construye el proyecto:
+### Configuración Automática con GitHub Actions
+
+1. **Sube todos los archivos** a tu repositorio f3-nrir.github.io
+
+2. **Configura GitHub Pages**:
+   - Ve a **Settings > Pages** en tu repositorio
+   - En **Source**, selecciona **"GitHub Actions"** (no "Deploy from a branch")
+
+3. **Haz push a main**:
 \`\`\`bash
-npm run build
+git add .
+git commit -m "Deploy portfolio to GitHub Pages"
+git push origin main
 \`\`\`
 
-2. Los archivos estáticos se generarán en la carpeta `out/`
+4. **El workflow se ejecutará automáticamente** y tu sitio estará disponible en https://f3-nrir.github.io
 
-3. Para GitHub Pages, asegúrate de que el repositorio esté configurado para servir desde la rama `gh-pages` o `main`.
+### Verificación del Despliegue
+
+- Ve a la pestaña **Actions** en tu repositorio para ver el progreso
+- Una vez completado, tu portafolio estará live en tu dominio de GitHub Pages
+- Los cambios futuros se desplegarán automáticamente al hacer push a main
 
 ## 📁 Estructura del Proyecto
 
 \`\`\`
-├── app/                    # App Router de Next.js
-│   ├── layout.tsx         # Layout principal
-│   ├── page.tsx           # Página principal
-│   └── globals.css        # Estilos globales
-├── components/            # Componentes React
-│   ├── ui/               # Componentes de UI reutilizables
-│   ├── header.tsx        # Navegación principal
-│   ├── hero.tsx          # Sección hero
-│   ├── about.tsx         # Sección sobre mí
-│   ├── skills.tsx        # Habilidades técnicas
-│   ├── experience.tsx    # Experiencia laboral
-│   ├── projects.tsx      # Proyectos destacados
-│   ├── contact.tsx       # Información de contacto
-│   └── footer.tsx        # Pie de página
-├── public/               # Archivos estáticos
-└── lib/                  # Utilidades y configuración
+├── .github/workflows/     # GitHub Actions para despliegue automático
+├── app/                   # App Router de Next.js
+│   ├── layout.tsx        # Layout principal
+│   ├── page.tsx          # Página principal
+│   └── globals.css       # Estilos globales
+├── components/           # Componentes React
+│   ├── ui/              # Componentes de UI reutilizables
+│   ├── header.tsx       # Navegación principal
+│   ├── hero.tsx         # Sección hero
+│   ├── about.tsx        # Sección sobre mí
+│   ├── skills.tsx       # Habilidades técnicas
+│   ├── experience.tsx   # Experiencia laboral
+│   ├── projects.tsx     # Proyectos destacados
+│   ├── contact.tsx      # Información de contacto
+│   └── footer.tsx       # Pie de página
+├── public/              # Archivos estáticos
+├── .nojekyll           # Deshabilita Jekyll en GitHub Pages
+└── lib/                # Utilidades y configuración
 \`\`\`
 
 ## 🎨 Personalización
@@ -116,3 +132,4 @@ Este proyecto es de uso personal. Todos los derechos reservados © 2025 Luis Mig
 ---
 
 **Construido con ❤️ usando Next.js y Tailwind CSS**
+

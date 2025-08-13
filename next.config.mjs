@@ -11,8 +11,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/f3-nrir.github.io' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/f3-nrir.github.io/' : '',
+  // User repositories (username.github.io) serve from root, not subfolder
 }
 
 export default nextConfig
+
