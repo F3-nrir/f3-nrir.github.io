@@ -1,7 +1,6 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { GraduationCap, Award, Trophy, Calendar } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
@@ -91,18 +90,6 @@ export function About() {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
-
-              {/* Skills Preview */}
-              <div className="pt-4">
-                <h4 className="text-lg font-serif font-semibold mb-4">Tecnologías principales</h4>
-                <div className="flex flex-wrap gap-2">
-                  {["Python", "Django", "JavaScript", "HTML/CSS", "SQL", "Docker", "Git", "Odoo"].map((skill) => (
-                    <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

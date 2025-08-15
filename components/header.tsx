@@ -47,6 +47,7 @@ export function Header() {
     { key: "nav.skills", href: "skills" },
     { key: "nav.experience", href: "experience" },
     { key: "nav.projects", href: "projects" },
+    { key: "nav.learning", href: "learning" },
     { key: "nav.contact", href: "contact" },
   ]
 
@@ -62,9 +63,13 @@ export function Header() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("hero")}
-              className="text-xl lg:text-2xl font-serif font-bold gradient-text hover:opacity-80 transition-opacity"
+              className="flex items-center hover:opacity-80 transition-opacity"
             >
-              LMG
+              {isScrolled && (
+                <div className="w-8 h-8 rounded-full overflow-hidden">
+                  <img src="/perfil.png" alt="Luis Miguel González D." className="w-full h-full object-cover" />
+                </div>
+              )}
             </button>
           </div>
 
@@ -149,4 +154,3 @@ export function Header() {
     </header>
   )
 }
-

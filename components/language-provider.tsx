@@ -21,15 +21,18 @@ const translations = {
     "nav.experience": "Experiencia",
     "nav.projects": "Proyectos",
     "nav.contact": "Contacto",
+    "nav.learning": "Aprendiendo",
 
     // Hero Section
     "hero.greeting": "Hola, soy",
-    "hero.title": "Desarrollador Backend",
+    "hero.title": "Desarrollador de Software",
     "hero.subtitle": "Transformando ideas en soluciones tecnológicas",
     "hero.description":
       "Desarrollador junior apasionado por la tecnología, especializado en backend con experiencia en Python, Django y desarrollo web. Siempre dispuesto a aprender y crecer profesionalmente.",
     "hero.cta": "Ver mi trabajo",
     "hero.contact": "Contactar",
+    "hero.download": "Descargar CV",
+    "hero.work": "Desarrollador de Software",
 
     // About Section
     "about.title": "Conoce mi historia",
@@ -58,7 +61,7 @@ const translations = {
     "experience.subtitle": "Mi trayectoria profesional",
     "experience.current": "Actual",
     "experience.company": "ASI S.U.R.L.",
-    "experience.position": "Desarrollador",
+    "experience.position": "Desarrollador de Software",
     "experience.period": "Enero 2024 - Presente",
     "experience.description":
       "Desarrollo y mantenimiento de aplicaciones web, participación en decisiones de infraestructura tecnológica, y creación de módulos personalizados para Odoo.",
@@ -67,20 +70,57 @@ const translations = {
     "experience.achievement2": "Creación de aplicaciones móviles y módulos Odoo",
     "experience.achievement3": "Participación en proyectos para clientes externos",
     "experience.achievement4": "Mejora de eficiencia y seguridad del sistema informático",
+    "experience.responsibilities": "Logros principales:",
+    "experience.resp1": "Desarrollo del sitio web oficial de la empresa",
+    "experience.resp2": "Creación de aplicaciones móviles y módulos Odoo",
+    "experience.resp3": "Participación en proyectos para clientes externos",
+    "experience.resp4": "Mejora de eficiencia y seguridad del sistema informático",
+    "experience.technologies": "Tecnologías Utilizadas",
 
     // Projects Section
     "projects.title": "Proyectos Destacados",
-    "projects.subtitle": "Algunos de mis trabajos más importantes",
+    "projects.subtitle": "Soluciones tecnológicas que he desarrollado para empresas y clientes",
     "projects.viewCode": "Ver código",
     "projects.viewDemo": "Ver demo",
+    "projects.viewProject": "Ver sitio",
     "projects.project1.title": "Red Social Empresarial",
     "projects.project1.description":
       "Plataforma de colaboración interna para empresas, desarrollada con Django. Facilita la comunicación y colaboración en proyectos de innovación.",
     "projects.project1.tech": "Django, Python, HTML/CSS, JavaScript",
+    "projects.project1.category": "Red Social",
     "projects.project2.title": "Sistema de Gestión Web",
     "projects.project2.description":
       "Aplicación web completa para gestión empresarial con módulos personalizados y integración con sistemas existentes.",
     "projects.project2.tech": "Python, Django, PostgreSQL, Docker",
+    "projects.project2.category": "Gestión Empresarial",
+    "projects.additional": "Otros Proyectos",
+    "projects.project3.title": "Módulos de Odoo Personalizados",
+    "projects.project3.description": "Desarrollo de módulos personalizados para Odoo que mejoran la productividad y eficiencia operativa de empresas clientes.",
+    "projects.project3.category": "Módulos Odoo",
+    "projects.project4.title": "Aplicación Móvil Empresarial",
+    "projects.project4.description": "Aplicación móvil única creada a petición de la empresa para mejorar la productividad interna del equipo de trabajo.",
+    "projects.project4.category": "Aplicación Móvil",
+
+    // Learning Section
+    "learning.title": "Lo que estoy aprendiendo",
+    "learning.subtitle": "Crecimiento continuo y nuevas tecnologías",
+    "learning.what": "¿Qué estoy aprendiendo?",
+    "learning.description": "Siempre buscando expandir mis conocimientos y explorar nuevas áreas del desarrollo de software.",
+    "learning.machineLearning.title": "Aprendizaje Automático",
+    "learning.machineLearning.description":
+      "Explorando algoritmos de aprendizaje automático y sus aplicaciones en problemas del mundo real.",
+    "learning.machineLearning.progress": "En progreso",
+    "learning.machineLearning.source": "Curso de FreeCodeCamp",
+    "learning.gamedev.title": "Desarrollo de Videojuegos",
+    "learning.gamedev.description": "Aprendiendo los fundamentos del desarrollo de juegos y creando juegos atractivos.",
+    "learning.gamedev.progress": "En progreso",
+    "learning.gamedev.source": "Documentación Oficial de Godot y Cursos de YouTube",
+    "learning.hobbies": "Intereses y Hobbies",
+    "learning.filosophy": "Filosofía de Aprendizaje",
+    "learning.filosophy.description":
+      `"La tecnología evoluciona constantemente, y como desarrollador, creo firmemente en la importancia
+                    del aprendizaje continuo.Cada nuevo lenguaje, framework o herramienta es una oportunidad para
+                    crecer profesionalmente y aportar más valor a los proyectos en los que trabajo."`,
 
     // Contact Section
     "contact.title": "Contacto",
@@ -91,10 +131,27 @@ const translations = {
     "contact.location": "Ubicación",
     "contact.linkedin": "LinkedIn",
     "contact.github": "GitHub",
+    "contact.telegram": "Telegram",
+    "contact.status.available": "Disponible",
+    "contact.social.title": "Redes Sociales",
+    "contact.info.availability": "Disponibilidad",
+    "contact.form.title": "Formulario de Contacto",
+    "contact.form.name": "Nombre",
+    "contact.form.namePlaceholder": "Tu nombre",
+    "contact.form.email": "Correo electrónico",
+    "contact.form.emailPlaceholder": "tu@email.com",
+    "contact.form.message": "Mensaje",
+    "contact.form.messagePlaceholder": "Escribe tu mensaje aquí...",
+    "contact.form.subject": "Asunto",
+    "contact.form.subjectPlaceholder": "Asunto",
+    "contact.form.send": "Enviar",
 
     // Footer
     "footer.rights": "Todos los derechos reservados",
     "footer.built": "Construido con",
+    "footer.description": "Desarrollador apasionado por crear soluciones tecnológicas innovadoras. Especializado en backend con experiencia en desarrollo web y sistemas empresariales.",
+    "footer.quickLinks": "Navegación",
+    "footer.contact": "Contacto",
 
     // Common
     "common.loading": "Cargando...",
@@ -108,15 +165,18 @@ const translations = {
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
+    "nav.learning": "Learning",
 
     // Hero Section
     "hero.greeting": "Hi, I'm",
-    "hero.title": "Backend Developer",
+    "hero.title": "Software Developer",
     "hero.subtitle": "Transforming ideas into tech solutions",
     "hero.description":
       "Junior developer passionate about technology, specialized in backend with experience in Python, Django and web development. Always eager to learn and grow professionally.",
     "hero.cta": "View my work",
     "hero.contact": "Contact me",
+    "hero.download": "Download CV",
+    "hero.work": "Software Developer",
 
     // About Section
     "about.title": "Get to know my story",
@@ -145,7 +205,7 @@ const translations = {
     "experience.subtitle": "My professional journey",
     "experience.current": "Current",
     "experience.company": "ASI S.U.R.L.",
-    "experience.position": "Developer",
+    "experience.position": "Software Developer",
     "experience.period": "January 2024 - Present",
     "experience.description":
       "Development and maintenance of web applications, participation in technological infrastructure decisions, and creation of custom Odoo modules.",
@@ -154,20 +214,58 @@ const translations = {
     "experience.achievement2": "Creation of mobile applications and Odoo modules",
     "experience.achievement3": "Participation in projects for external clients",
     "experience.achievement4": "Improvement of efficiency and security of the IT system",
+    "experience.responsibilities": "Main achievements:",
+    "experience.resp1": "Development of the company's official website",
+    "experience.resp2": "Creation of mobile applications and Odoo modules",
+    "experience.resp3": "Participation in projects for external clients",
+    "experience.resp4": "Improvement of efficiency and security of the IT system",
+    "experience.technologies": "Technologies Used",
 
     // Projects Section
     "projects.title": "Featured Projects",
-    "projects.subtitle": "Some of my most important work",
+    "projects.subtitle": "Technological solutions I have developed for companies and clients",
     "projects.viewCode": "View code",
     "projects.viewDemo": "View demo",
+    "projects.viewProject": "View site",
     "projects.project1.title": "Enterprise Social Network",
     "projects.project1.description":
       "Internal collaboration platform for companies, developed with Django. Facilitates communication and collaboration on innovation projects.",
     "projects.project1.tech": "Django, Python, HTML/CSS, JavaScript",
+    "projects.project1.category": "Social Network",
     "projects.project2.title": "Web Management System",
     "projects.project2.description":
       "Complete web application for business management with custom modules and integration with existing systems.",
     "projects.project2.tech": "Python, Django, PostgreSQL, Docker",
+    "projects.project2.category": "Business Management",
+    "projects.additional": "Other Projects",
+    "projects.project3.title": "Custom Odoo Modules",
+    "projects.project3.description":
+      "Development of custom modules for Odoo, which improve productivity and operational efficiency for client companies.",
+    "projects.project3.category": "Odoo Modules",
+    "projects.project4.title": "Business Mobile Application",
+    "projects.project4.description":
+      "Unique mobile application created at the company's request to improve internal team productivity.",
+    "projects.project4.category": "Mobile Application",
+
+    // Learning Section
+    "learning.title": "What I'm Learning",
+    "learning.subtitle": "Continuous growth and new technologies",
+    "learning.what": "What I'm learning?",
+    "learning.description": "Always seeking to expand my knowledge and explore new areas of software development.",
+    "learning.machineLearning.title": "Machine Learning",
+    "learning.machineLearning.description":
+      "Exploring machine learning algorithms and their applications in real-world problems.",
+    "learning.machineLearning.progress": "In progress",
+    "learning.machineLearning.source": "FreeCodeCamp Course",
+    "learning.gamedev.title": "Game Development",
+    "learning.gamedev.description": "Learning the fundamentals of game development and creating engaging games.",
+    "learning.gamedev.progress": "In progress",
+    "learning.gamedev.source": "Official Documentation of Godot and Youtube Courses",
+    "learning.hobbies": "Interests and Hobbies",
+    "learning.filosophy": "Learning Philosophy",
+    "learning.filosophy.description":
+      `"Technology is constantly evolving, and as a developer, I firmly believe in the importance of continuous learning.
+                    Every new language, framework, or tool is an opportunity to grow professionally and add more value to the projects I work on."`,
 
     // Contact Section
     "contact.title": "Contact",
@@ -178,10 +276,27 @@ const translations = {
     "contact.location": "Location",
     "contact.linkedin": "LinkedIn",
     "contact.github": "GitHub",
+    "contact.telegram": "Telegram",
+    "contact.status.available": "Available",
+    "contact.social.title": "Social Media",
+    "contact.info.availability": "Availability",
+    "contact.form.title": "Contact Form",
+    "contact.form.name": "Name",
+    "contact.form.namePlaceholder": "Your name",
+    "contact.form.email": "Email",
+    "contact.form.emailPlaceholder": "your@email.com",
+    "contact.form.subject": "Subject",
+    "contact.form.subjectPlaceholder": "Message subject",
+    "contact.form.message": "Message",
+    "contact.form.messagePlaceholder": "Tell me about your project...",
+    "contact.form.send": "Send message",
 
     // Footer
     "footer.rights": "All rights reserved",
     "footer.built": "Built with",
+    "footer.description": "Passionate developer passionate about creating innovative technological solutions. Specialized in backend with experience in web development and business systems.",
+    "footer.quickLinks": "Navigation",
+    "footer.contact": "Contact",
 
     // Common
     "common.loading": "Loading...",

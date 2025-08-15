@@ -13,44 +13,42 @@ export function Projects() {
     {
       title: t("projects.project1.title"),
       description: t("projects.project1.description"),
-      technologies: ["Django", "Python", "PostgreSQL", "HTML/CSS", "JavaScript", "Bootstrap"],
+      technologies: ["Django", "PostgreSQL", "HTML/CSS", "JavaScript", "Bootstrap"],
       github: "https://github.com/Asthart/comunidad",
       demo: null,
-      image: "/social-network-platform.png",
+      image: "/hubinabred.uic.cu.png",
       featured: true,
-      category: "Web Application",
+      category: t("projects.project1.category"),
     },
     {
       title: t("projects.project2.title"),
       description: t("projects.project2.description"),
-      technologies: ["Python", "Django", "PostgreSQL", "Docker", "REST API"],
+      technologies: ["Odoo 16"],
       github: null,
       demo: "https://antasi.asisurl.cu",
-      image: "/business-management-dashboard.png",
+      image: "/antasi.png",
       featured: true,
-      category: "Enterprise System",
+      category: t("projects.project2.category"),
     },
     {
-      title: "Módulos Odoo Personalizados",
-      description:
-        "Desarrollo de módulos personalizados para Odoo que mejoran la productividad y eficiencia operativa de empresas clientes.",
-      technologies: ["Python", "Odoo", "XML", "PostgreSQL", "JavaScript"],
+      title: t("projects.project3.title"),
+      description: t("projects.project3.description"),
+      technologies: ["Python", "Odoo", "XML", "JavaScript"],
       github: null,
       demo: null,
-      image: "/odoo-modules-interface.png",
+      image: "/odoo.png",
       featured: false,
-      category: "ERP Module",
+      category: t("projects.project3.category"),
     },
     {
-      title: "Aplicaciones Móviles Empresariales",
-      description:
-        "Desarrollo de aplicaciones móviles para mejorar la comunicación y gestión interna de equipos empresariales.",
-      technologies: ["React Native", "JavaScript", "API REST", "SQLite"],
+      title: t("projects.project4.title"),
+      description: t("projects.project4.description"),
+      technologies: ["Kotlin", "HTML/CSS", "API REST", "XML", "Odoo"],
       github: null,
       demo: null,
-      image: "/mobile-business-app-interface.png",
+      image: "/apk.png",
       featured: false,
-      category: "Mobile App",
+      category: t("projects.project4.category"),
     },
   ]
 
@@ -126,7 +124,7 @@ export function Projects() {
                       <Button size="sm" asChild className="gradient-bg hover:opacity-90 text-white">
                         <a href={project.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="mr-2 h-4 w-4" />
-                          {t("projects.viewDemo")}
+                          {t("projects.viewProject")}
                         </a>
                       </Button>
                     )}
@@ -139,20 +137,31 @@ export function Projects() {
           {/* Other Projects */}
           {otherProjects.length > 0 && (
             <div>
-              <h3 className="text-2xl font-serif font-bold mb-8 text-center">Otros Proyectos</h3>
+              <h3 className="text-2xl font-serif font-bold mb-8 text-center">{t("projects.additional")}</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {otherProjects.map((project, index) => (
                   <Card
                     key={index}
-                    className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="group border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                   >
-                    <CardContent className="p-6">
-                      <div className="flex items-start justify-between mb-3">
-                        <h4 className="text-lg font-serif font-bold">{project.title}</h4>
-                        <Badge variant="secondary" className="bg-accent/10 text-accent text-xs">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute top-2 right-2">
+                        <Badge variant="secondary" className="bg-primary/90 text-primary-foreground text-xs">
                           {project.category}
                         </Badge>
                       </div>
+                    </div>
+
+                    <CardContent className="p-6">
+                      <h4 className="text-lg font-serif font-bold mb-3 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h4>
 
                       <p className="text-foreground/80 mb-4 text-sm leading-relaxed">{project.description}</p>
 

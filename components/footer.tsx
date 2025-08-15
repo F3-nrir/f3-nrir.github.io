@@ -36,6 +36,7 @@ export function Footer() {
     { key: "nav.skills", href: "skills" },
     { key: "nav.experience", href: "experience" },
     { key: "nav.projects", href: "projects" },
+    { key: "nav.learning", href: "learning" },
     { key: "nav.contact", href: "contact" },
   ]
 
@@ -55,18 +56,15 @@ export function Footer() {
             {/* Brand Section */}
             <div className="lg:col-span-2 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center text-white font-serif font-bold">
-                  LMG
+                <div className="w-10 h-10 rounded-lg overflow-hidden">
+                  <img src="/perfil.png" alt="Luis Miguel González D." className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-serif font-bold">Luis Miguel González</h3>
-                  <p className="text-sm text-muted-foreground">Backend Developer</p>
+                  <h3 className="text-lg font-serif font-bold">Luis Miguel González Domínguez</h3>
+                  <p className="text-sm text-muted-foreground">{t("hero.work")}</p>
                 </div>
               </div>
-              <p className="text-foreground/80 max-w-md leading-relaxed">
-                Desarrollador apasionado por crear soluciones tecnológicas innovadoras. Especializado en backend con
-                experiencia en desarrollo web y sistemas empresariales.
-              </p>
+              <p className="text-foreground/80 max-w-md leading-relaxed">{t("footer.description")}</p>
               <div className="flex gap-3">
                 {socialLinks.map((social, index) => (
                   <Button
@@ -86,7 +84,10 @@ export function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-serif font-semibold mb-4">Navegación</h4>
+              <h4 className="font-serif font-semibold mb-4">
+                {/* Added translation for quick links title */}
+                {t("footer.quickLinks")}
+              </h4>
               <nav className="space-y-2">
                 {quickLinks.map((link, index) => (
                   <button
@@ -102,7 +103,10 @@ export function Footer() {
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-serif font-semibold mb-4">Contacto</h4>
+              <h4 className="font-serif font-semibold mb-4">
+                {/* Added translation for contact title */}
+                {t("footer.contact")}
+              </h4>
               <div className="space-y-2 text-sm">
                 <p className="text-muted-foreground">Las Tunas, Cuba</p>
                 <a
@@ -111,7 +115,7 @@ export function Footer() {
                 >
                   f3nrir.v2@gmail.com
                 </a>
-                <a href="tel:+5355886613" className="block text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://wa.me/5355886613" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors">
                   +53 55886613
                 </a>
               </div>
@@ -123,15 +127,18 @@ export function Footer() {
         <div className="border-t border-border py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>© {currentYear} Luis Miguel González.</span>
+              <span>© {currentYear} Luis Miguel González Domínguez.</span>
               <span>{t("footer.rights")}</span>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <span>{t("footer.built")}</span>
+                <span>
+                  {/* Added translation for made with text */}
+                  {t("footer.madeWith")}
+                </span>
                 <Heart className="h-4 w-4 text-red-500" />
-                <span>usando Next.js & Tailwind CSS</span>
+                <span>{t("footer.and")} Next.js & Tailwind CSS</span>
               </div>
 
               <Button

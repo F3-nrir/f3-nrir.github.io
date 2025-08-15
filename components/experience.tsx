@@ -16,30 +16,9 @@ export function Experience() {
       location: "Las Tunas, Cuba",
       current: true,
       description: t("experience.description"),
-      achievements: [
-        t("experience.achievement1"),
-        t("experience.achievement2"),
-        t("experience.achievement3"),
-        t("experience.achievement4"),
-      ],
-      technologies: ["Python", "Django", "Odoo", "PostgreSQL", "HTML/CSS", "JavaScript", "Docker"],
+      achievements: [t("experience.resp1"), t("experience.resp2"), t("experience.resp3"), t("experience.resp4")],
+      technologies: ["Python", "Django", "Odoo", "PostgreSQL", "Docker", "Git", "Kotlin"],
       website: "https://antasi.asisurl.cu",
-    },
-  ]
-
-  const projects = [
-    {
-      title: "Red Social Empresarial",
-      period: "09/2024 - 02/2025",
-      description:
-        "Desarrollo de una plataforma de colaboración interna para empresas, facilitando la comunicación y colaboración en proyectos de innovación.",
-      technologies: ["Django", "Python", "PostgreSQL", "HTML/CSS", "JavaScript"],
-      github: "https://github.com/Asthart/comunidad",
-      achievements: [
-        "Implementación de sistema de autenticación y autorización",
-        "Desarrollo de módulos de colaboración y gestión de proyectos",
-        "Integración con sistemas existentes de la empresa",
-      ],
     },
   ]
 
@@ -52,7 +31,9 @@ export function Experience() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold mb-4 gradient-text">
               {t("experience.title")}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t("experience.subtitle")}</p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("experience.subtitle")}
+            </p>
           </div>
 
           {/* Work Experience */}
@@ -108,7 +89,7 @@ export function Experience() {
                   <p className="text-foreground/80 mb-6 leading-relaxed">{exp.description}</p>
 
                   <div className="mb-6">
-                    <h4 className="font-semibold mb-3">{t("experience.achievements")}</h4>
+                    <h4 className="font-semibold mb-3">{t("experience.responsibilities")}</h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, achIndex) => (
                         <li key={achIndex} className="flex items-start gap-2 text-sm text-foreground/80">
@@ -120,7 +101,10 @@ export function Experience() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold mb-3">Tecnologías utilizadas:</h4>
+                    <h4 className="font-semibold mb-3">
+                      {/* Added translation for technologies used */}
+                      {t("experience.technologies")}
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, techIndex) => (
                         <Badge
@@ -136,68 +120,6 @@ export function Experience() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          {/* Personal Projects */}
-          <div>
-            <h3 className="text-2xl font-serif font-bold mb-8 text-center">Proyectos Personales</h3>
-            <div className="space-y-6">
-              {projects.map((project, index) => (
-                <Card
-                  key={index}
-                  className="border-accent/20 bg-card/50 backdrop-blur-sm hover:shadow-lg transition-shadow duration-300"
-                >
-                  <CardContent className="p-6">
-                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
-                      <div>
-                        <h4 className="text-lg font-serif font-bold mb-1">{project.title}</h4>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4" />
-                          {project.period}
-                        </div>
-                      </div>
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-primary hover:text-accent transition-colors text-sm font-medium"
-                        >
-                          <ExternalLink className="h-4 w-4" />
-                          Ver en GitHub
-                        </a>
-                      )}
-                    </div>
-
-                    <p className="text-foreground/80 mb-4 leading-relaxed">{project.description}</p>
-
-                    <div className="mb-4">
-                      <h5 className="font-semibold mb-2 text-sm">Logros principales:</h5>
-                      <ul className="space-y-1">
-                        {project.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start gap-2 text-sm text-foreground/80">
-                            <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <Badge
-                          key={techIndex}
-                          variant="secondary"
-                          className="bg-accent/10 text-accent hover:bg-accent/20"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
         </div>
       </div>

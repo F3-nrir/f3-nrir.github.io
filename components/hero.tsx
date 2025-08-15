@@ -31,7 +31,7 @@ export function Hero() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-tight">
                 <span className="gradient-text">Luis Miguel</span>
                 <br />
-                <span className="text-foreground">González</span>
+                <span className="text-foreground">González D.</span>
               </h1>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-primary font-semibold">
                 {t("hero.title")}
@@ -109,13 +109,13 @@ export function Hero() {
             <Card className="p-8 max-w-sm w-full bg-card/50 backdrop-blur-sm border-border/50 shadow-xl">
               <div className="text-center space-y-6">
                 {/* Profile Image Placeholder */}
-                <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white text-4xl font-serif font-bold shadow-lg">
-                  LMG
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg">
+                  <img src="/portada.png" alt="Luis Miguel González" className="w-full h-full object-cover" />
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xl font-serif font-bold">Luis Miguel González</h3>
-                  <p className="text-primary font-medium">Backend Developer</p>
+                  <h3 className="text-xl font-serif font-bold">Luis Miguel González D.</h3>
+                  <p className="text-primary font-medium">{t("hero.work")}</p>
                   <p className="text-sm text-muted-foreground">Las Tunas, Cuba</p>
                 </div>
 
@@ -137,7 +137,7 @@ export function Hero() {
                 >
                   <a href="/cv-luis-miguel-gonzalez.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
-                    Descargar CV
+                    {t("hero.download")}
                   </a>
                 </Button>
               </div>
