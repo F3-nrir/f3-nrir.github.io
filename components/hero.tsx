@@ -109,8 +109,10 @@ export function Hero() {
             <Card className="p-8 max-w-sm w-full bg-card/50 backdrop-blur-sm border-border/50 shadow-xl">
               <div className="text-center space-y-6">
                 {/* Profile Image Placeholder */}
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg">
-                  <img src="/portada.png" alt="Luis Miguel González" className="w-full h-full object-cover" />
+                <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-accent p-1 shadow-lg">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-background">
+                    <img src="/portada.png" alt="Luis Miguel González" className="w-full h-full object-cover" />
+                  </div>
                 </div>
 
                 <div className="space-y-2">

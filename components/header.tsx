@@ -53,9 +53,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -66,9 +65,16 @@ export function Header() {
               className="flex items-center hover:opacity-80 transition-opacity"
             >
               {isScrolled && (
-                <div className="w-8 h-8 rounded-full overflow-hidden">
-                  <img src="/perfil.png" alt="Luis Miguel González D." className="w-full h-full object-cover" />
+                <div className="w-8 h-8 rounded-full overflow-hidden bg-gradient-to-br from-primary to-accent p-0.5">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-background">
+                    <img src="/perfil.png" alt="Luis Miguel González D." className="w-full h-full object-cover" />
+                  </div>
                 </div>
+              )}
+              {isScrolled && (
+                <span className="ml-1 text-xl lg:text-2xl font-serif font-bold gradient-text hover:opacity-80 transition-opacity">
+                  LMGD
+                </span>
               )}
             </button>
           </div>

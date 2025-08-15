@@ -90,7 +90,7 @@ const translations = {
     "projects.project1.category": "Red Social",
     "projects.project2.title": "Sistema de Gestión Web",
     "projects.project2.description":
-      "Aplicación web completa para gestión empresarial con módulos personalizados y integración con sistemas existentes.",
+      "Aplicación web completa para gestión empresarial con módulos personalizados e integración con sistemas existentes.",
     "projects.project2.tech": "Python, Django, PostgreSQL, Docker",
     "projects.project2.category": "Gestión Empresarial",
     "projects.additional": "Otros Proyectos",
@@ -152,6 +152,8 @@ const translations = {
     "footer.description": "Desarrollador apasionado por crear soluciones tecnológicas innovadoras. Especializado en backend con experiencia en desarrollo web y sistemas empresariales.",
     "footer.quickLinks": "Navegación",
     "footer.contact": "Contacto",
+    "footer.madeWith": "Hecho con",
+    "footer.and": "utilizando",
 
     // Common
     "common.loading": "Cargando...",
@@ -297,6 +299,8 @@ const translations = {
     "footer.description": "Passionate developer passionate about creating innovative technological solutions. Specialized in backend with experience in web development and business systems.",
     "footer.quickLinks": "Navigation",
     "footer.contact": "Contact",
+    "footer.madeWith": "Made with",
+    "footer.and": "using",
 
     // Common
     "common.loading": "Loading...",

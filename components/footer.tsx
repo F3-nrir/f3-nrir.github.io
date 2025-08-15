@@ -56,8 +56,11 @@ export function Footer() {
             {/* Brand Section */}
             <div className="lg:col-span-2 space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg overflow-hidden">
-                  <img src="/perfil.png" alt="Luis Miguel González D." className="w-full h-full object-cover" />
+                {/* Added gradient background to profile image */}
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent p-0.5">
+                  <div className="w-full h-full rounded-lg overflow-hidden bg-background">
+                    <img src="/perfil.png" alt="Luis Miguel González D." className="w-full h-full object-cover" />
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-lg font-serif font-bold">Luis Miguel González Domínguez</h3>
@@ -115,7 +118,12 @@ export function Footer() {
                 >
                   f3nrir.v2@gmail.com
                 </a>
-                <a href="https://wa.me/5355886613" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="https://wa.me/5355886613"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-muted-foreground hover:text-primary transition-colors"
+                >
                   +53 55886613
                 </a>
               </div>
