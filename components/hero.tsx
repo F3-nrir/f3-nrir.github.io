@@ -116,7 +116,7 @@ export function Hero() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xl font-serif font-bold">Luis Miguel González D.</h3>
+                  <h3 className="text-xl font-serif font-bold">Luis Miguel González Domínguez</h3>
                   <p className="text-primary font-medium">{t("hero.work")}</p>
                   <p className="text-sm text-muted-foreground">Las Tunas, Cuba</p>
                 </div>
